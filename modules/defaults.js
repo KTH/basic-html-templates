@@ -29,7 +29,7 @@ const css = function css() {
 
   return `
       <!-- Default style. -->
-      <!-- Override by proces.env.CSS_URI='https://example.com/my.css' -->s
+      <!-- Override by proces.env.CSS_URI='https://example.com/my.css' -->
       <style>
         body {
             background-color: #e3e5e3;

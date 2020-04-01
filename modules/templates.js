@@ -77,15 +77,16 @@ let page = function page(title, body) {
  * robots.txt
  */
 let _robotstxt = function robotstxt(disallow = "Disallow: /") {
-  return `User-agent: *\n${disallow}`;
+  return `User-agent: *
+  ${disallow}`;
 };
 
 /**
  * Monitor page
  */
 let _monitor = function _monitor(status = "OK") {
-  return `APPLICATION_STATUS: ${status}}\n
-  \nHOSTNAME: ${os.hostname()}`;
+  return `APPLICATION_STATUS: ${status}
+HOSTNAME: ${os.hostname()}`;
 };
 
 /**
