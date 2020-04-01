@@ -29,7 +29,7 @@ const css = function css() {
 
   return `
       <!-- Default style. -->
-      <!-- Override by proces.env.CSS_URI='https://example.com/my.css'
+      <!-- Override by proces.env.CSS_URI='https://example.com/my.css' -->s
       <style>
         body {
             background-color: #e3e5e3;
@@ -124,8 +124,6 @@ const css = function css() {
         
         .importance-marker.high {
             background: #d85497;
-        }
-        
         }
     </style>`;
 };

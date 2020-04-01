@@ -35,6 +35,39 @@ describe("Template paths handling\n", function() {
       "User-agent: *\nDisallow: /tmp/"
     );
   });
+
+  it("Path '/_about' should display build information.", function() {
+    const mock = {
+      gitBranch: "origin/master",
+      gitCommit: "cc3a60cc2a062dcbe8e71c662c7aa4502871fa17",
+      gitUrl: "git@github.com:KTH/tamarack.git",
+      jenkinsBuild: "144",
+      jenkinsBuildDate: "2020-03-24 14:12:52",
+      dockerName: "tamarack",
+      dockerVersion: "2.6.144_cc3a60c",
+      dockerImage: "kthregistryv2.sys.kth.se/tamarack:2.6.144_cc3a60c"
+    };
+    expect(templates._about(mock, Date.now())).to.contain(
+      "<p><strong>Docker image:</strong> tamarack:2.6.144_cc3a60c</p>"
+    );
+  });
+
+  it("Path '/_about' should display when the service was stared started is passed.", function() {
+    const mock = {
+      gitBranch: "origin/master",
+      gitCommit: "cc3a60cc2a062dcbe8e71c662c7aa4502871fa17",
+      gitUrl: "git@github.com:KTH/tamarack.git",
+      jenkinsBuild: "144",
+      jenkinsBuildDate: "2020-03-24 14:12:52",
+      dockerName: "tamarack",
+      dockerVersion: "2.6.144_cc3a60c",
+      dockerImage: "kthregistryv2.sys.kth.se/tamarack:2.6.144_cc3a60c"
+    };
+    const started = Date.now();
+    expect(templates._about(mock, started)).to.contain(
+      `<p><strong>Started:</strong> ${started}</p>`
+    );
+  });
 });
 
 describe("Defaults and overrides\n", function() {
