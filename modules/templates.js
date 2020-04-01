@@ -76,7 +76,7 @@ let page = function page(title, body) {
 /**
  * robots.txt
  */
-let _robotstxt = function robotstxt(disallow = "Disallow: /") {
+let robotstxt = function robotstxt(disallow = "Disallow: /") {
   return `User-agent: *\n${disallow}`;
 };
 
@@ -112,8 +112,10 @@ let _about = function _about(about, started) {
 module.exports = {
   index: index,
   page: page,
+  header: header,
+  footer: footer,
   error404: error404,
   _monitor: _monitor,
   _about: _about,
-  robotstxt: _robotstxt
+  robotstxt: robotstxt
 };
