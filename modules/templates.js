@@ -32,7 +32,7 @@ let footer = function footer(statusCode) {
   if (statusCode == statusCodes.OK) {
     statusCodeParagraph = "";
   }
-  return `
+  return `  </div>
         </body>
     </html>
 `;
@@ -55,24 +55,32 @@ let error404 = function error404(title = "Page not found") {
 /**
  * Index page.
  */
-let index = function index(title) {
+let index = function index(title, body) {
+  if (!body) {
+    body = `
+    <h1>${title}</h1>
+    <p>
+      There is really nothing to see here, got to
+      <a href="https://www.kth.se/">the KTH main site</a> instead. Much more interesting, hopefully ...
+    </p>`;
+  }
   return `
     ${header(title)}
-    <h1>${title}</h1>
-    <p>There is really nothing to see here, got to <a href="https://www.kth.se/">the KTH main site</a> instead. Much more interesting, hopefully ...</p>
-    ${footer(statusCodes.OK)}`;
+    ${body}
+    ${footer(statusCodes.OK)}
+    `;
 };
 
 /**
  * General page.
  */
-let page = function page(title, body) {
+let page = function page(title, body = "") {
   return `
     ${header(title)}
-    <h1>${title}</h1>
     ${body}
     ${footer(statusCodes.OK)}`;
 };
+
 /**
  * robots.txt
  */
@@ -83,9 +91,9 @@ let robotstxt = function robotstxt(disallow = "Disallow: /") {
 /**
  * Monitor page
  */
-let _monitor = function _monitor(status = "OK") {
+let _monitor = function _monitor(status = "OK", extras = "") {
   return `APPLICATION_STATUS: ${status}
-HOSTNAME: ${os.hostname()}`;
+HOSTNAME: ${os.hostname()}\n${extras}`;
 };
 
 /**
