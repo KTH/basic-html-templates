@@ -1,1 +1,1 @@
-# kth-html-templates
+# Basic Html Templates
