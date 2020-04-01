@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "NODE_ENV=development node_modules/mocha/bin/mocha ./test/test-*.js ./test/**/test-*.js",
-    "build": "npm install && npm test"
+    "build": "npm audit fix && npm install && npm test"
   },
   "repository": {
     "type": "git",
