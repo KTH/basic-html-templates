@@ -1,0 +1,32 @@
+{
+  "name": "@kth/basic-html-templates",
+  "version": "0.0.1",
+  "description": "Basic html templates for simple gui:s",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=development node_modules/mocha/bin/mocha ./test/test-*.js ./test/**/test-*.js",
+    "build": "npm install && npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KTH/basic-html-templates.git"
+  },
+  "keywords": [
+    "npm",
+    "kth"
+  ],
+  "author": {
+    "name": "KTH",
+    "email": "infosys@kth.se",
+    "url": "https://github.com/KTH"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KTH/basic-html-templates/issues"
+  },
+  "homepage": "https://github.com/KTH/basic-html-templates#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.1.1"
+  }
+}
