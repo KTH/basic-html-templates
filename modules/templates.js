@@ -77,8 +77,7 @@ let page = function page(title, body) {
  * robots.txt
  */
 let _robotstxt = function robotstxt(disallow = "Disallow: /") {
-  return `User-agent: *
-  ${disallow}`;
+  return `User-agent: *\n${disallow}`;
 };
 
 /**
