@@ -18,8 +18,22 @@ describe("Template paths handling\n", function() {
     expect(templates.error404("A custom title")).to.contain("A custom title");
   });
 
-  it("Path '/_monitor' should default contain 'APPLICATION_STATUS: OK'.", function() {
-    expect(templates._monitor()).to.contain("APPLICATION_STATUS: OK");
+  it("Path '/_monitor' must be passed a status ('OK', 'ERROR') or show 'APPLICATION_STATUS: MISSING_STATUS'.", function() {
+    expect(templates._monitor()).to.contain(
+      "APPLICATION_STATUS: MISSING_STATUS"
+    );
+  });
+
+  it("Path '/_monitor' should default contain passed status code 'APPLICATION_STATUS: MY_CODE'.", function() {
+    expect(templates._monitor("MY_CODE")).to.contain(
+      "APPLICATION_STATUS: MY_CODE"
+    );
+  });
+
+  it("Path '/_monitor' should contain any extra lines passed as extras.", function() {
+    expect(templates._monitor("OK", "\nhej"))
+      .to.contain("APPLICATION_STATUS: OK")
+      .and.to.contain("\nhej");
   });
 
   it("Path '/_monitor' should 'APPLICATION_STATUS: ERROR' if 'ERROR' passed.", function() {

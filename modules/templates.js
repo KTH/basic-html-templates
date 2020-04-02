@@ -91,7 +91,10 @@ let robotstxt = function robotstxt(disallow = "Disallow: /") {
 /**
  * Monitor page
  */
-let _monitor = function _monitor(status = "OK", extras = "") {
+let _monitor = function _monitor(status, extras = "") {
+  if (!status) {
+    status = "MISSING_STATUS";
+  }
   return `APPLICATION_STATUS: ${status}
 HOSTNAME: ${os.hostname()}\n${extras}`;
 };
