@@ -54,7 +54,7 @@ const css = function css() {
         h1 {
             font-size: 2.75rem;
             font-weight: 400;
-            line-height: auto;
+            line-height: 1.4375;
         }
         h2 {
             font-size: 2.0rem;
@@ -134,5 +134,5 @@ const css = function css() {
 module.exports = {
   logotype: logotype,
   applicationInsights: applicationInsights,
-  css: css
+  css: css,
 };
