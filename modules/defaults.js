@@ -6,7 +6,7 @@ let logotype = function logotype() {
 };
 
 const applicationInsights = () => {
-  if (process.env.APPINSIGHTS_INSTRUMENTATIONKEY == null) {
+  if (!process.env.APPINSIGHTS_INSTRUMENTATIONKEY) {
     return "";
   }
 
