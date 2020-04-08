@@ -1,6 +1,6 @@
 {
   "name": "@kth/basic-html-templates",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Basic html templates for simple gui:s",
   "main": "index.js",
   "scripts": {

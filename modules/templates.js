@@ -12,7 +12,7 @@ let header = function header(title) {
     <!-- Served by ${title} -->
     <html lang="en">
     <head>
-        <title>${title}</title>
+        <title>${title} | KTH</title>
         <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no">
         ${defaults.applicationInsights()}
         ${defaults.css()}
@@ -29,7 +29,7 @@ let header = function header(title) {
  */
 let footer = function footer(statusCode) {
   let statusCodeParagraph = `<p class="small">For all you techies, yes that means response code ${statusCode} </p>`;
-  if (statusCode == statusCodes.OK) {
+  if (statusCode === statusCodes.OK) {
     statusCodeParagraph = "";
   }
   return `  </div>
@@ -128,5 +128,5 @@ module.exports = {
   error404: error404,
   _monitor: _monitor,
   _about: _about,
-  robotstxt: robotstxt
+  robotstxt: robotstxt,
 };
