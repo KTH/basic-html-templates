@@ -32,7 +32,9 @@ let footer = function footer(statusCode) {
   if (statusCode === statusCodes.OK) {
     statusCodeParagraph = "";
   }
-  return `  </div>
+
+  return `${statusCodeParagraph}
+            </div>
         </body>
     </html>
 `;
