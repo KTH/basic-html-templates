@@ -20,7 +20,7 @@ let header = function header(title) {
     <body>
 
     <div class="wrapper">
-        <a href="https://www.kth.se/"><img width=76 height=76 src="${defaults.logotype()}" alt="KTH Logotype"></a>
+        <a href="https://www.kth.se/" id="home-logotype"><img width=76 height=76 src="${defaults.logotype()}" alt="KTH Logotype"></a>
 `;
 };
 
