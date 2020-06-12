@@ -62,7 +62,7 @@ let index = function index(title, body) {
     body = `
     <h1>${title}</h1>
     <p>
-      There is really nothing to see here, got to
+      There is really nothing to see here, go to
       <a href="https://www.kth.se/">the KTH main site</a> instead. Much more interesting, hopefully ...
     </p>`;
   }
