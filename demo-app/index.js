@@ -1,14 +1,3 @@
-# Basic Html Templates ![alt text](https://api.travis-ci.org/KTH/basic-html-templates.svg?branch=master)
-
-A simple way to get web pages to look somewhat like the kth.se design. The templates are intended to be used in private to semiprivate services.
-
-## Demo application
-
-[Demo code source here](https://github.com/KTH/basic-html-templates/tree/master/demo-app/).
-
-```javascript
-
-// index.js
 const express = require("express");
 const httpResponse = require("@kth/http-responses");
 const app = express();
@@ -41,28 +30,3 @@ app.use(function (request, response) {
 app.listen(80, function () {
   console.log("Server started");
 });
-
-```
-
-```json
-// package.json
-{
-  "name": "Demo",
-  "version": "1.0.0",
-  "description": "Demo app for @kth/http-responses",
-  "main": "index.js",
-  "scripts": {
-  },
-  "author": "paddy",
-  "license": "ISC",
-  "dependencies": {
-    "@kth/http-responses": "^1.0.20",
-    "express": "^4.17.1"
-  }
-}
-```
-
-Examples:
-- https://app.kth.se/
-- https://app.kth.se/pipeline/
-- https://app.kth.se/jsonschema/
