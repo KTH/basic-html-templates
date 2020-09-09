@@ -1,14 +1,16 @@
 {
-    "name": "Demo",
-    "version": "1.0.0",
-    "description": "Demo app for @kth/http-responses",
-    "main": "index.js",
-    "scripts": {
-    },
-    "author": "paddy@kth.se",
-    "license": "MIT",
-    "dependencies": {
-      "@kth/http-responses": "^1.0.20",
-      "express": "^4.17.1"
-    }
+  "name": "demo-app",
+  "version": "1.0.0",
+  "description": "Demo app for @kth/basic-html-templates",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -r ./node_modules && rm package-lock.json"
+  },
+  "author": "paddy@kth.se",
+  "license": "MIT",
+  "dependencies": {
+    "@kth/basic-html-templates": "^1.0.24",
+    "@kth/http-responses": "^1.0.20",
+    "express": "^4.17.1"
   }
+}
