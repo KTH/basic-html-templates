@@ -5,7 +5,6 @@ A simple way to get web pages to look somewhat like the kth.se design. The templ
 
 ```javascript
 const express = require("express");
-const { templates } = require("@kth/basic-html-templates");
 const httpResponse = require("@kth/http-responses");
 const app = express();
 
