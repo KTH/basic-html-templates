@@ -89,7 +89,9 @@ describe("Defaults and overrides\n", function () {
     const override_title = "env title";
     expect(templates.index("My title")).to.not.contain(override_title);
     process.env.APPLICATION_NAME = override_title;
-    expect(templates.index("My title")).to.contain(override_title);
+    expect(templates.index("My title")).to.contain(
+      `<!-- Served by ${override_title} -->`
+    );
     delete process.env.APPLICATION_NAME;
   });
 
