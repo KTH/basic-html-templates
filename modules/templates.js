@@ -4,12 +4,15 @@ const os = require("os");
 const defaults = require("./defaults");
 const { statusCodes } = require("./httpResponse");
 
+let servedBy = function servedBy(title) {
+  return process.env.APPLICATION_NAME ? process.env.APPLICATION_NAME : title;
+};
 /**
  * Header html
  */
 let header = function header(title) {
   return `<!DOCTYPE html>
-    <!-- Served by ${title} -->
+    <!-- Served by ${servedBy(title)} -->
     <html lang="en">
     <head>
         <title>${title} | KTH</title>

@@ -85,6 +85,14 @@ describe("Template paths handling\n", function () {
 });
 
 describe("Defaults and overrides\n", function () {
+  it("If 'APPLICATION_NAME' is specified show that instead of title in html comment.", function () {
+    const override_title = "env title";
+    expect(templates.index("My title")).to.not.contain(override_title);
+    process.env.APPLICATION_NAME = override_title;
+    expect(templates.index("My title")).to.contain(override_title);
+    delete process.env.APPLICATION_NAME;
+  });
+
   it("The Application Insights script is not added then the env 'APPINSIGHTS_INSTRUMENTATIONKEY' is missing.", function () {
     expect(templates.index()).to.not.contain("instrumentationKey");
   });
