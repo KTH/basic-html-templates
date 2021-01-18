@@ -90,7 +90,7 @@ let page = function page(title, body = "") {
  * robots.txt
  */
 let robotstxt = function robotstxt(disallow = "Disallow: /") {
-  return `User-agent: *\n${disallow}`;
+  return `# basic-html-templates\nUser-agent: *\n${disallow}`;
 };
 
 /**
