@@ -42,13 +42,13 @@ describe("Template paths handling\n", function () {
 
   it("Path '/robots.txt' should disallow all indexing as default.", function () {
     expect(templates.robotstxt()).to.equal(
-      "# basic-html-templates\nUser-agent: *\nDisallow: /"
+      "# @kth/basic-html-templates\nUser-agent: *\nDisallow: /"
     );
   });
 
   it("Path '/robots.txt' can disallow specific paths.", function () {
     expect(templates.robotstxt("Disallow: /tmp/")).to.equal(
-      "# basic-html-templates\nUser-agent: *\nDisallow: /tmp/"
+      "# @kth/basic-html-templates\nUser-agent: *\nDisallow: /tmp/"
     );
   });
 
