@@ -110,5 +110,7 @@ app.listen(80, function () {
 
 Examples:
 - https://app.kth.se/
+- https://app.kth.se/robots.txt
+- https://app.kth.se/_monitor
 - https://app.kth.se/pipeline/
 - https://app.kth.se/jsonschema/

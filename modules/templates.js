@@ -2,6 +2,7 @@
 
 const os = require("os");
 const defaults = require("./defaults");
+const packageJson = require("../package.json");
 const { statusCodes } = require("./httpResponse");
 
 let servedBy = function servedBy(title) {
@@ -90,7 +91,7 @@ let page = function page(title, body = "") {
  * robots.txt
  */
 let robotstxt = function robotstxt(disallow = "Disallow: /") {
-  return `# @kth/basic-html-templates\nUser-agent: *\n${disallow}`;
+  return `# ${packageJson.name}\nUser-agent: *\n${disallow}`;
 };
 
 /**
