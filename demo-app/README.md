@@ -1,4 +1,4 @@
-# Demo app for @kth/http-responses
+# Demo app for @kth/basic-html-templates
 
 To run the demo app run:
 ```bash
