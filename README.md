@@ -1,4 +1,7 @@
 # Basic HTML Templates ![alt text](https://api.travis-ci.org/KTH/basic-html-templates.svg?branch=master)
+
+Npm: `@kth/http-responses`
+
 ## Simple KTH look
 A simple way to get web pages to look somewhat like the kth.se design. The templates are intended to be used in private to semiprivate services.
 
