@@ -1,4 +1,4 @@
-# Basic HTML Templates ![alt text](https://api.travis-ci.org/KTH/basic-html-templates.svg?branch=master)
+# Basic HTML Templates ![alt text](https://api.travis-ci.org/KTH/basic-html-templates.svg?branch=master) ![Continous Integration](https://github.com/KTH/basic-html-templates/actions/workflows/main.yml/badge.svg)
 
 Npm: `@kth/basic-html-templates`
 
