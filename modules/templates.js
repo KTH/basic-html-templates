@@ -59,6 +59,21 @@ let error404 = function error404(title = "Page not found") {
 };
 
 /**
+ * 403 forbidden page
+ */
+let forbidden = function error404(
+  title = "You are not allowed to access this content"
+) {
+  return `
+    ${header(title)}
+        <h1>🔐 Forbidden to access.</h1>
+        <h2>Sorry, You do not have the permissions needed to access this content</h2>
+        <p>If You should please contact the administrator for this service.</p> 
+    ${footer(statusCodes.FORBIDDEN)}
+    `;
+};
+
+/**
  * Index page.
  */
 let index = function index(title, body) {
@@ -132,6 +147,7 @@ module.exports = {
   header: header,
   footer: footer,
   error404: error404,
+  forbidden: forbidden,
   _monitor: _monitor,
   _about: _about,
   robotstxt: robotstxt,

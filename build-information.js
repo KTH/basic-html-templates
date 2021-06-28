@@ -1,0 +1,1 @@
+module.exports = {"gitBranch": "master", "gitCommit": "abcdef", "gitUrl": null, "buildNumber": "1623534355", "buildDate": "2021-06-12 21:46:30", "version": "1.0.50"}

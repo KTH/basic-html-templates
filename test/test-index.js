@@ -18,6 +18,15 @@ describe("Template paths handling\n", function () {
     expect(templates.error404("A custom title")).to.contain("A custom title");
   });
 
+  it("Path '/403' should contain a title if passed.", function () {
+    expect(templates.forbidden("A custom title")).to.contain("A custom title");
+  });
+  it("Path '/403' should contain a forbidden information.", function () {
+    expect(templates.forbidden()).to.contain(
+      "You are not allowed to access this content"
+    );
+  });
+
   it("Path '/_monitor' must be passed a status ('OK', 'ERROR') or show 'APPLICATION_STATUS: MISSING_STATUS'.", function () {
     expect(templates._monitor()).to.contain(
       "APPLICATION_STATUS: MISSING_STATUS"
