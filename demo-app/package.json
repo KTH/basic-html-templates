@@ -9,8 +9,8 @@
   "author": "paddy@kth.se",
   "license": "MIT",
   "dependencies": {
-    "@kth/basic-html-templates": "^1.0.24",
-    "@kth/http-responses": "^1.0.20",
-    "express": "^4.17.1"
+    "@kth/basic-html-templates": "^1.0.70",
+    "@kth/http-responses": "^1.0.79",
+    "express": "^4.18.1"
   }
 }
