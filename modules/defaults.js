@@ -26,7 +26,8 @@ const css = function css() {
   if (process.env.CSS_URI) {
     return `<link rel="stylesheet" href="${process.env.CSS_URI}" />`;
   }
-  return `<link rel="stylesheet" href="https://www.kth.se/css/kth-5f5f79eef475004fee82bae5a9864d82.css" />
+  return `<!-- Default style. -->
+  <link rel="stylesheet" href="https://www.kth.se/css/kth-5f5f79eef475004fee82bae5a9864d82.css" />
   <style>
   .main.container {
     padding-top: 15px;

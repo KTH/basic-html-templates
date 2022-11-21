@@ -34,7 +34,7 @@ let header = function header(title) {
         <div class="container">
           <div class="header-container__top">
             <figure class="block figure defaultTheme mainLogo" aria-label="Till KTH:s startsida">
-              <a href="https://www.kth.se"><img class="figure-img img-fluid" src="https://www.kth.se/polopoly_fs/1.77259.1610365240!/KTH_Logotyp_RGB_2013-2.svg" alt="Till KTH:s startsida" title="KTH_Logotyp_RGB_2013-2.svg" height="70" width="70"></a>
+              <a href="https://www.kth.se" id="home-logotype"><img class="figure-img img-fluid" src="${defaults.logotype()}" alt="Till KTH:s startsida" title="KTH_Logotyp_RGB_2013-2.svg" height="70" width="70"></a>
             </figure>
           </div>
           <div class="header-container__bottom"></div>

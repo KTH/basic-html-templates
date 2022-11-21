@@ -124,7 +124,7 @@ describe("Defaults and overrides\n", function () {
     delete process.env.APPINSIGHTS_INSTRUMENTATIONKEY;
   });
 
-  it("As default the logo is fetched from www.ktk.se.", function () {
+  it("As default the logo is fetched from www.kth.se.", function () {
     expect(templates.index()).to.contain(
       "https://www.kth.se/polopoly_fs/1.77257!/KTH_Logotyp_RGB_2013-2.svg"
     );
