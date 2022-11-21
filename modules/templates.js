@@ -13,34 +13,72 @@ let servedBy = function servedBy(title) {
  */
 let header = function header(title) {
   return `<!DOCTYPE html>
-    <!-- Served by ${servedBy(title)} -->
-    <html lang="en">
-    <head>
-        <title>${title} | KTH</title>
-        <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no">
-        ${defaults.applicationInsights()}
-        ${defaults.css()}
-    </head>
-    <body>
+<!-- Served by ${servedBy(title)} -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>${title}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="${title}">
+    ${defaults.applicationInsights()}
+    ${defaults.css()}
+    <script src="//www.kth.se/social/toolbar/widget.js"></script>
+  </head>
+  <body>
 
-    <div class="wrapper">
-        <a href="https://www.kth.se/" id="home-logotype"><img width=76 height=76 src="${defaults.logotype()}" alt="KTH Logotype"></a>
-`;
+  <body class="use-personal-menu">
+    <header>
+      <a class="skipToMainContent" href="#mainContent" tabindex="0">Till innehåll på sidan</a>
+      <div class="container-fluid">
+        <div class="container">
+          <div class="header-container__top">
+            <figure class="block figure defaultTheme mainLogo" aria-label="Till KTH:s startsida">
+              <a href="https://www.kth.se"><img class="figure-img img-fluid" src="https://www.kth.se/polopoly_fs/1.77259.1610365240!/KTH_Logotyp_RGB_2013-2.svg" alt="Till KTH:s startsida" title="KTH_Logotyp_RGB_2013-2.svg" height="70" width="70"></a>
+            </figure>
+          </div>
+          <div class="header-container__bottom"></div>
+        </div>
+      </div>
+      <div id="gradientBorder"></div>
+    </header>
+    <div class="container main">
+      <div class="row">
+        <div class="col app">
+          <div id="app">
+            <main id="mainContent">
+    `;
 };
 
 /**
  * Footer html
  */
 let footer = function footer(statusCode) {
-  let statusCodeParagraph = `<p class="small">For all you techies, yes that means response code ${statusCode} </p>`;
+  let statusCodeParagraph = `<p class="small">(Statuskod: ${statusCode}) </p>`;
   if (statusCode === statusCodes.OK) {
     statusCodeParagraph = "";
   }
 
-  return `${statusCodeParagraph}
-            </div>
-        </body>
-    </html>
+  return `
+              ${statusCodeParagraph}
+            </main>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="container"></footer>
+
+    <script>
+      window.addEventListener('load', function() {
+        var skipLink = document.querySelector('a.skipToMainContent');
+        if (skipLink && skipLink !== document.body.firstElementChild) {
+          document.body.insertBefore(skipLink, document.body.firstElementChild);
+        }
+      })
+    </script>
+  </body>
+</html>
 `;
 };
 
